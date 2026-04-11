@@ -106,4 +106,4 @@ MIT License - see [LICENSE](LICENSE) file.
 ---
 
 ⭐ **Made with ❤️ by BIG SAM**  
-[Live Demo](http://localhost:3000) | [API Docs](https://developer.hyper3d.ai)
+[Live Demo](http://modra1.vercel.app) | [API Docs](https://developer.hyper3d.ai)
