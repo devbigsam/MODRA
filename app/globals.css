@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 0%;
+  --foreground: 0 0% 100%;
+
+  --card: 0 0% 3.9%;
+  --card-foreground: 0 0% 98%;
+
+  --popover: 0 0% 3.9%;
+  --popover-foreground: 0 0% 98%;
+
+  --primary: 0 0% 100%;
+  --primary-foreground: 0 0% 0%;
+
+  --secondary: 0 0% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+
+  --muted: 0 0% 14.9%;
+  --muted-foreground: 0 0% 63.9%;
+
+  --accent: 0 0% 100%;
+  --accent-foreground: 0 0% 0%;
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 0 0% 15.9%;
+  --input: 0 0% 15.9%;
+  --ring: 0 0% 100%;
+
+  --radius: 0.5rem;
+}
+
+* {
+  @apply border-border;
+}
+
+html, body {
+  height: auto;
+  width: 100%;
+  overflow-x: hidden;
+}
+body {
+  @apply bg-background text-foreground;
+  font-family: "Geist Mono", monospace;
+  background-color: black;
+}
+
+@keyframes spin3d {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+.cube-wire {
+  width: 60px;
+  height: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  position: absolute;
+  border-radius: 12px;
+
+  /* fallback (works everywhere) */
+  background: rgba(255, 255, 255, 0.05);
+
+  /* blur effect */
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
+  animation: spin3d 6s linear infinite;
+}
+
+.cube-glow {
+  box-shadow: 0 0 40px rgba(120, 120, 255, 0.25);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 18s linear infinite;
+}
+
