@@ -8,7 +8,7 @@ export async function POST(request: Request) {
     const formData = await request.formData()
 
     // Forward the request to the Hyper3D API
-    const response = await fetch("https://api.hyper3d.com/api/v2", {
+    const response = await fetch("https://hyperhuman.deemos.com/api/v2/rodin", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${API_KEY}`,
